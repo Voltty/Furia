@@ -1,99 +1,33 @@
--- Arquivo de apoio, caso você queira criar tabelas como as aqui criadas para a API funcionar.
--- Você precisa executar os comandos no banco de dados para criar as tabelas,
--- ter este arquivo aqui não significa que a tabela em seu BD estará como abaixo!
+CREATE DATABASE furia;
+USE furia;
 
-/*
-comandos para mysql - banco local - ambiente de desenvolvimento
-*/
-
-CREATE DATABASE aquatech;
-
-USE aquatech;
+CREATE TABLE modalidade (
+	id_modalidade INT PRIMARY KEY AUTO_INCREMENT,
+    modalidade VARCHAR(45)
+);
 
 CREATE TABLE usuario (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	nome VARCHAR(50),
-	email VARCHAR(50),
-	senha VARCHAR(50)
+	id_usuario INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(45),
+    email VARCHAR(100),
+    senha VARCHAR(20),
+    fk_modalidade_favorita INT,
+    CONSTRAINT fk_modalidade_usuario FOREIGN KEY (fk_modalidade_favorita) REFERENCES modalidade(id_modalidade)
 );
 
-CREATE TABLE aviso (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	titulo VARCHAR(100),
-	descricao VARCHAR(150),
-	fk_usuario INT,
-	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
+CREATE TABLE partidas (
+	id_partida INT NOT NULL,
+    fk_modalidade INT NOT NULL,
+    data_inicio DATE NOT NULL,
+    horario_inicio TIME NOT NULL,
+    time_1 VARCHAR(45) NOT NULL,
+    time_2 VARCHAR(45)NOT NULL,
+    mapa_1 VARCHAR(45) NOT NULL,
+    mapa_2 VARCHAR(45),
+    mapa_3 VARCHAR(45),
+    pontuacao_1 INT NOT NULL,
+    pontuacao_2 INT,
+    pontuacao_3 INT,
+    CONSTRAINT fk_modalidade_patidas FOREIGN KEY (fk_modalidade) REFERENCES modalidade(id_modalidade),
+    CONSTRAINT pk_modalidade_partidas PRIMARY KEY (fk_modalidade,id_partida)
 );
-
-create table aquario (
-/* em nossa regra de negócio, um aquario tem apenas um sensor */
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	descricao VARCHAR(300)
-);
-
-/* esta tabela deve estar de acordo com o que está em INSERT de sua API do arduino - dat-acqu-ino */
-
-create table medida (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	dht11_umidade DECIMAL,
-	dht11_temperatura DECIMAL,
-	luminosidade DECIMAL,
-	lm35_temperatura DECIMAL,
-	chave TINYINT,
-	momento DATETIME,
-	fk_aquario INT,
-	FOREIGN KEY (fk_aquario) REFERENCES aquario(id)
-);
-
-
-/*
-comando para sql server - banco remoto - ambiente de produção
-*/
-
-CREATE TABLE usuario (
-	id INT PRIMARY KEY IDENTITY(1,1),
-	nome VARCHAR(50),
-	email VARCHAR(50),
-	senha VARCHAR(50),
-);
-
-CREATE TABLE aviso (
-	id INT PRIMARY KEY IDENTITY(1,1),
-	titulo VARCHAR(100),
-	descricao VARCHAR(150),
-	fk_usuario INT FOREIGN KEY REFERENCES usuario(id)
-);
-
-create table aquario (
-/* em nossa regra de negócio, um aquario tem apenas um sensor */
-	id INT PRIMARY KEY IDENTITY(1,1),
-	descricao VARCHAR(300)
-);
-
-/* esta tabela deve estar de acordo com o que está em INSERT de sua API do arduino - dat-acqu-ino */
-
-CREATE TABLE medida (
-	id INT PRIMARY KEY IDENTITY(1,1),
-	dht11_umidade DECIMAL,
-	dht11_temperatura DECIMAL,
-	luminosidade DECIMAL,
-	lm35_temperatura DECIMAL,
-	chave TINYINT,
-	momento DATETIME,
-	fk_aquario INT FOREIGN KEY REFERENCES aquario(id)
-);
-
-/*
-comandos para criar usuário em banco de dados azure, sqlserver,
-com permissão de insert + update + delete + select
-*/
-
-CREATE USER [usuarioParaAPIWebDataViz_datawriter_datareader]
-WITH PASSWORD = '#Gf_senhaParaAPIWebDataViz',
-DEFAULT_SCHEMA = dbo;
-
-EXEC sys.sp_addrolemember @rolename = N'db_datawriter',
-@membername = N'usuarioParaAPIWebDataViz_datawriter_datareader';
-
-EXEC sys.sp_addrolemember @rolename = N'db_datareader',
-@membername = N'usuarioParaAPIWebDataViz_datawriter_datareader';
