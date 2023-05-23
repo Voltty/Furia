@@ -3,32 +3,39 @@
     padding: 0;
     box-sizing: border-box;
 }
+body, html{
+    width: 100%;
+    height: 100%;
+}
 #login{
+    width: 100%;
+    height: 100%;
     display: grid;
     grid-template-columns:50% 50%;
 }
 #esquerda {
-    background-image: url();
+    background-image: url(../assets/image/fundo_login.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
-    display: grid;
-    grid-template-columns:25% 50% 25%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #33313177;
 }
 .form {
-    background-color: #333131;
+    background-color: #000000;
     color: #FFFFFF;
-    width: 100%;
+    width: 50%;
     height: 150px;
     padding:20px 40px 20px 40px;
-    margin-top: 33%;
     border: #000000 1px solid;
     border-radius: 10px;
 }
 #direita {
-    align-items: center;
+    display: flex;
     justify-content: center;
+    align-items: center;
     background-color: #000000;
 }
 .form button {

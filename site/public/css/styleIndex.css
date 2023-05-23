@@ -1,39 +1,21 @@
 *{
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 a{
     text-decoration: none;
     color: #000000;
 }
-.navbar{
-    display: flex;
-    flex-direction: row-reverse;
-    background-color: #000000;
-    height: 9vh;
-    margin-bottom: 3%;
-}
-.navbar a {
-    height: 7.72vh;
-    display: inline-block;
-    padding: 8px 8px 0px 8px;
-    text-decoration: none;
-    color: #ffffff;
-    background-color: #333131;
-    border-left: 2px solid black;
-}
-#logo{
-    width: 40px;
+body, html{
+    width: 100%;
+    height: 100%;
 }
 .limitador {
     margin: 0 10% 0 10%;
 }
-.header {
-    width: 100%;
-}
 .container {
     background-color: #FFFFFF;
-    height: 80vh;
     display: grid;
     grid-template-columns:2.5fr 0.5fr  ;
     grid-gap: 8.33333333333%;
@@ -74,38 +56,6 @@ a{
 .button-right {
     right: 10px;
 }
-table {
-    margin: 0;
-}
-.partidas{
-    display: flex;
-    margin-bottom: 30px;
-    width: 100%;
-    height: 13vh;
-}
-.box-partida {
-    width: 100%;
-    list-style: none;
-    background-color: black;
-    border-radius: 5px;
-    padding: 10px 0px 15px 0px;
-}
-
-.partidas a {
-    display: inline-block;
-    background-color: #333131;
-    width: 10%;
-    height: 8.5vh;
-    border: 1px #191149 solid;
-    margin-left: 5px;
-    padding: 3px 0px 5px 3px;
-    font-size: 14px;
-    color: #FFFFFF;
-}
-.placar{
-    justify-content: right;
-    justify-self: right;
-}
 .aside-atividade-recente{
     padding: 15px;
     color: #FFFFFF;
@@ -119,21 +69,4 @@ table {
     display: block;
     background-color: #333131;
 }
-.footer{
-    height: 12vh;
-    width: 100%;
-    color: #FFFFFF;
-    background-color: #191149;
-    margin-top: 20px;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    text-align: center;
-}
-.box-footer{
-    
-}
+

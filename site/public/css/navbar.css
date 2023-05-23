@@ -1,0 +1,21 @@
+.navbar{
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #000000;
+    height: 6vh;
+    margin-bottom: 3%;
+}
+.navbar a {
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:0px 8px 0px 8px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #333131;
+    border-left: 2px solid black;
+}
+#logo{
+    width: 40px;
+}

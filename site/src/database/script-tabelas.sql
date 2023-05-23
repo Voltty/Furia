@@ -38,3 +38,8 @@ INSERT INTO modalidade VALUES
     (null,'Rocket League'),
     (null,'Apex'),
     (null,'LOL');
+    
+CREATE USER IF NOT EXISTS 'furia'@'localhost' IDENTIFIED BY 'super_furia';
+GRANT INSERT , SELECT ON furia.* TO 'furia'@'localhost';
+
+SELECT * FROM usuario;

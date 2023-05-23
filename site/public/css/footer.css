@@ -1,0 +1,17 @@
+.footer{
+    height: 12vh;
+    width: 100%;
+    color: #FFFFFF;
+    background-color: #191149;
+    margin-top: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+}
+.box-footer{
+    
+}
