@@ -60,26 +60,29 @@ body, html{
 }
 
 .embaixo{
-    margin: 10% 15% 0% 15%;
+    margin: 10% 15% 0% 2%;
     display: flex;
-    width: 100%;
+    width: 98%;
+    height: 50%;
 }
 .mapas{
     height: 40%;
     width: 30%;
+    font-size:x-large;
+    color: #000000;
     display: grid;
     grid-template-rows:33.33333333% 33.33333333% 33.33333333%;
+    row-gap: 6px;
 }
 .mapa1 ,.mapa2 ,.mapa3{
-    height: 33.33333333%;
-    width: 30%;
+    height: 100%;
+    width: 33%;
+    background-color: #FFFFFF;
 }
 .placar{
     display: table-column;
     margin: 0;
-    width:  ;
 }
-
 .aside-atividade-recente{
     padding: 15px;
     color: #FFFFFF;
@@ -92,4 +95,11 @@ body, html{
     margin-bottom: 5%;
     display: block;
     background-color: #333131;
+}
+table{
+    color: #000000;
+    background-color: #FFFFFF;
+    width: 250%;
+    height: 100%;
+    text-align: center;
 }

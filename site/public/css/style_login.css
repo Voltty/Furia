@@ -17,6 +17,7 @@ body, html{
     background-image: url(../assets/image/fundo_login.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     height: 100%;
     display: flex;
     justify-content: center;
