@@ -24,12 +24,25 @@ body{
 .container a {
     color: #FFFFFF;
 }
-.article{
+.partidas{
     color: #FFFFFF;
     height: 100vh;
     background-color: #000000;
     display:inline-block;
     border-radius: 5px;
+}
+.jogos{
+    width: 60%;
+    height: 100px;
+    margin-bottom: 5.5px;
+}
+.jogos a{
+    border: #FFFFFF solid 1px;
+    background-color: black;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    font-size: xx-large;
 }
 .section a{
     display: inline-block;
@@ -49,4 +62,3 @@ body{
     display: block;
     background-color: #333131;
 }
-
