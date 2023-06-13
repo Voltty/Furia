@@ -1,6 +1,4 @@
 function cadastrar() {
-
-
     //Recupere o valor da nova input pelo nome do id
     // Agora vá para o método fetch logo abaixo
     var nomeVar = input_nome.value;

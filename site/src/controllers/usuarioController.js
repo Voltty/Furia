@@ -22,6 +22,7 @@ function listar(req, res) {
                 res.status(500).json(erro.sqlMessage);
             }
         );
+        console.log("oi");
 }
 
 function entrar(req, res) {

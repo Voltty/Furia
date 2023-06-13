@@ -3,12 +3,20 @@ var router = express.Router();
 
 var medidaController = require("../controllers/medidaController");
 
-router.get("/ultimas/:idAquario", function (req, res) {
-    medidaController.buscarUltimasMedidas(req, res);
+router.get("/CSGO/", function (req, res) {
+    medidaController.buscarCSGO(req, res);
 });
-
-router.get("/tempo-real/:idAquario", function (req, res) {
-    medidaController.buscarMedidasEmTempoReal(req, res);
-})
+router.get("/VL/", function (req, res) {
+    medidaController.buscarVL(req, res);
+});
+router.get("/RL/", function (req, res) {
+    medidaController.buscarRL(req, res);
+});
+router.get("/APEX/", function (req, res) {
+    medidaController.buscarAPEX(req, res);
+});
+router.get("/LOL/", function (req, res) {
+    medidaController.buscarLOL(req, res);
+});
 
 module.exports = router;

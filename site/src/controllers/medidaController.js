@@ -1,48 +1,94 @@
 var medidaModel = require("../models/medidaModel");
 
-function buscarUltimasMedidas(req, res) {
+function buscarCSGO(req, res) {
+    var idVotacao = req.params.idVotacao;
 
-    const limite_linhas = 7;
+    console.log(`Recuperando os dados`);
 
-    var idAquario = req.params.idAquario;
-
-    console.log(`Recuperando as ultimas ${limite_linhas} medidas`);
-
-    medidaModel.buscarUltimasMedidas(idAquario, limite_linhas).then(function (resultado) {
+    medidaModel.buscarCSGO(idVotacao).then(function (resultado) {
         if (resultado.length > 0) {
             res.status(200).json(resultado);
         } else {
-            res.status(204).send("Nenhum resultado encontrado!")
+            res.status(204).send("Nenhum dado encontrado!")
         }
     }).catch(function (erro) {
         console.log(erro);
-        console.log("Houve um erro ao buscar as ultimas medidas.", erro.sqlMessage);
+        console.log("Houve um erro ao buscar os dados.", erro.sqlMessage);
         res.status(500).json(erro.sqlMessage);
     });
 }
+function buscarVL(req, res) {
+    var idVotacao = req.params.idVotacao;
 
+    console.log(`Recuperando os dados`);
 
-function buscarMedidasEmTempoReal(req, res) {
-
-    var idAquario = req.params.idAquario;
-
-    console.log(`Recuperando medidas em tempo real`);
-
-    medidaModel.buscarMedidasEmTempoReal(idAquario).then(function (resultado) {
+    medidaModel.buscarVL(idVotacao).then(function (resultado) {
         if (resultado.length > 0) {
             res.status(200).json(resultado);
         } else {
-            res.status(204).send("Nenhum resultado encontrado!")
+            res.status(204).send("Nenhum dado encontrado!")
         }
     }).catch(function (erro) {
         console.log(erro);
-        console.log("Houve um erro ao buscar as ultimas medidas.", erro.sqlMessage);
+        console.log("Houve um erro ao buscar os dados.", erro.sqlMessage);
         res.status(500).json(erro.sqlMessage);
     });
 }
+function buscarRL(req, res) {
+    var idVotacao = req.params.idVotacao;
 
+    console.log(`Recuperando os dados`);
+
+    medidaModel.buscarRL(idVotacao).then(function (resultado) {
+        if (resultado.length > 0) {
+            res.status(200).json(resultado);
+        } else {
+            res.status(204).send("Nenhum dado encontrado!")
+        }
+    }).catch(function (erro) {
+        console.log(erro);
+        console.log("Houve um erro ao buscar os dados.", erro.sqlMessage);
+        res.status(500).json(erro.sqlMessage);
+    });
+}
+function buscarAPEX(req, res) {
+    var idVotacao = req.params.idVotacao;
+
+    console.log(`Recuperando os dados`);
+
+    medidaModel.buscarAPEX(idVotacao).then(function (resultado) {
+        if (resultado.length > 0) {
+            res.status(200).json(resultado);
+        } else {
+            res.status(204).send("Nenhum dado encontrado!")
+        }
+    }).catch(function (erro) {
+        console.log(erro);
+        console.log("Houve um erro ao buscar os dados.", erro.sqlMessage);
+        res.status(500).json(erro.sqlMessage);
+    });
+}
+function buscarLOL(req, res) {
+    var idVotacao = req.params.idVotacao;
+
+    console.log(`Recuperando os dados`);
+
+    medidaModel.buscarLOL(idVotacao).then(function (resultado) {
+        if (resultado.length > 0) {
+            res.status(200).json(resultado);
+        } else {
+            res.status(204).send("Nenhum dado encontrado!")
+        }
+    }).catch(function (erro) {
+        console.log(erro);
+        console.log("Houve um erro ao buscar os dados.", erro.sqlMessage);
+        res.status(500).json(erro.sqlMessage);
+    });
+}
 module.exports = {
-    buscarUltimasMedidas,
-    buscarMedidasEmTempoReal
-
+    buscarCSGO,
+    buscarVL,
+    buscarAPEX,
+    buscarRL,
+    buscarLOL
 }

@@ -12,7 +12,9 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
 }
-
+#myChart{
+    height: 100%;
+}
 .limitador {
     margin: 0 10% 0 10%;
 }
@@ -37,6 +39,8 @@ body{
     margin-bottom: 5.5px;
 }
 .jogos a{
+    color: #000000;
+    font-weight: bolder;
     border: #FFFFFF solid 1px;
     background-color: black;
     display: inline-block;
@@ -50,6 +54,7 @@ body{
     height: 160px;
 }
 .aside-atividade-recente{
+    display: grid;
     padding: 15px;
     color: #FFFFFF;
     background-color: black;
@@ -57,7 +62,7 @@ body{
 }
 .aside-atividade-recente a{
     width: 100%;
-    height: 8.5%;
+    height: 90%;
     margin-bottom: 5%;
     display: block;
     background-color: #333131;

@@ -17,90 +17,11 @@
         <a href="./login.html">Login </a>
         <a href="">Forum</a>
         <a href="./partidas.html">Partidas</a>
-        <a href="">Noticias</a>
     </div>
     <div class="limitador">
         <div class="header">
             <div class="partidas">
-                <div class="box-partida">
-                    <a href="./partidas/partidaCSHeroic.html">
-                        <table>
-                            <tr><th>CS:GO</th><th></th></tr>
-                            <tr><td>Furia</td><td class="placar">16 (2)</td></tr><tr>
-                                <td>Heroic</td><td>10 (1)</td></tr>
-                        </table>
-                    </a>
-                    <a href="./partidas/partidaCSCloud9.html">
-                        <table>
-                            <tr><th>CS:GO</th><th></th></tr>
-                            <tr><td>Furia</td><td class="placar">16 (2)</td></tr><tr>
-                                <td>Cloud 9</td><td>7 (0)</td></tr>
-                        </table>
-                    </a>
-                <a href="./partidas/partidaRLM80.html">
-                    <table>
-                        <tr><th>RL</th><th></th></tr>
-                        <tr><td>Furia</td><td class="placar">6 (3)</td></tr><tr>
-                            <td>M80 </td><td>3 (0)</td></tr>
-                    </table>
-                </a>
-                <a href="">
-                    <table>
-                        <tr><th>RL</th><th></th></tr>
-                        <tr><td>Furia</td><td class="placar">3 (3)</td></tr><tr>
-                            <td>Hey bro </td><td>1 (1)</td></tr>
-                    </table>
-                </a>
-                <a href="">
-                    <table>
-                        <tr><th>VL</th><th></th></tr>
-                        <tr><td>Furia</td><td class="placar">16 (0)</td></tr><tr>
-                            <td>NRG</td><td>7 (2)</td></tr>
-                    </table>
-                </a>
-                <a href="">
-                    <table>
-                        <tr><th>LOL</th><th></th></tr>
-                        <tr><td>Furia</td><td class="placar"> (1)</td></tr><tr>
-                            <td>Pain</td><td> (2)</td></tr>
-                    </table>
-                </a>
-                <a href="./partidas/partidaCSHeroic.html">
-                    <table>
-                        <tr><th>CS:GO</th><th></th></tr>
-                        <tr><td>Furia</td><td class="placar">16 (2)</td></tr><tr>
-                            <td>Heroic</td><td>10 (1)</td></tr>
-                    </table>
-                </a>
-                <a href="">
-                    <table>
-                        <tr><th>VL</th><th></th></tr>
-                        <tr><td>Furia</td><td class="placar">16 (0)</td></tr><tr>
-                            <td>NRG</td><td>7 (2)</td></tr>
-                    </table>
-                </a>
-                <a href="./partidas/partidaCSHeroic.html">
-                    <table>
-                        <tr><th>CS:GO</th><th></th></tr>
-                        <tr><td>Furia</td><td class="placar">16 (2)</td></tr><tr>
-                            <td>Heroic</td><td>10 (1)</td></tr>
-                    </table>
-                </a>
-                <a href="">
-                    <table>
-                        <tr><th>VL</th><th></th></tr>
-                        <tr><td>Furia</td><td class="placar">16 (0)</td></tr><tr>
-                            <td>NRG</td><td>7 (2)</td></tr>
-                    </table>
-                </a>
-                <a href="./partidas/partidaCSCloud9.html">
-                    <table>
-                        <tr><th>CS:GO</th><th></th></tr>
-                        <tr><td>Furia</td><td class="placar">16 (2)</td></tr><tr>
-                            <td>Cloud 9</td><td>10 (1)</td></tr>
-                    </table>
-                </a>
-                </div>
+                <div class="box-partida" id="nav_partidas"></div>
             </div>
         </div>
         <div class="container">
@@ -116,16 +37,13 @@
             </div>
             
             <div class="aside-atividade-recente">
+                <canvas id="myChart"></canvas>
                 <a href="">conversa 1</a>
                 <a href="">conversa 2</a>
                 <a href="">conversa 3</a>
                 <a href="">conversa 4</a>
                 <a href="">conversa 5</a>
                 <a href="">conversa 6</a>
-                <a href="">conversa 7</a>
-                <a href="">conversa 8</a>
-                <a href="">conversa 9</a>
-                <a href="">conversa 10</a>
             </div>
         </div>
     </div>
@@ -136,4 +54,6 @@
     </div>
 </body>
 </html>
-<script src="../js/carrossel.js"></script>
+<script src="./js/chart.js"></script>
+<script src="./js/grafico.js"></script>
+<script src="./js/nav_partidas.js"></script>
