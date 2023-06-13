@@ -12,13 +12,15 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
 }
-#myChart{
+body, html{
+    width: 100%;
     height: 100%;
 }
 .limitador {
     margin: 0 10% 0 10%;
 }
 .container {
+    height: 80vh;
     display: grid;
     grid-template-columns:2.5fr 0.5fr  ;
     grid-gap: 8.33333333333%;
@@ -28,20 +30,29 @@ body{
 }
 .article{
     color: #FFFFFF;
-    height: 100vh;
+    height: 80vh;
     background-color: #000000;
     display:inline-block;
     border-radius: 5px;
 }
-.section a{
-    display: inline-block;
-    width: 99%;
-    height: 200px;
-    margin-bottom: 5px;
-    margin-left: 0.5%;
+.cabeca{
+    height: 40%;
+    align-items: center;
+    justify-items: center;
 }
+
+.embaixo{
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0% 15% 0% 2%;
+    width: 98%;
+    height: 50%;
+}
+.embaixo h1{
+    font-size: xXX-large;
+}
+
 .aside-atividade-recente{
-    display: grid;
     padding: 15px;
     color: #FFFFFF;
     background-color: black;
@@ -49,7 +60,7 @@ body{
 }
 .aside-atividade-recente a{
     width: 100%;
-    height: 90%;
+    height: 8.5%;
     margin-bottom: 5%;
     display: block;
     background-color: #333131;
